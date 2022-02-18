@@ -139,3 +139,28 @@ a {
     cursor:pointer;
     display:inline-block; 
 }
+#students {
+    width: 100%;
+    font-family: Geneva, Helvetica, sans-serif;
+    border-collapse: collapse;
+    
+  }
+  #students td, #students th {
+    border: 1px solid rgb(255, 228, 179);
+    padding: 10px;
+  }
+
+  #students tr:nth-child(even){
+      background-color: rgb(248, 219, 157);
+    }
+
+#students tr:hover {
+    background-color: rgb(250, 238, 216);}
+
+#students th {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  background-color: rgb(0, 46, 46);
+  color: white;
+}

@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const form = document.getElementById("register");
     const msg =document.getElementById("success");
-
-
-
+    getStudents();
     form.addEventListener("submit", 
         registerStudent);
 
@@ -13,30 +11,19 @@ document.addEventListener("DOMContentLoaded", function() {
        msg.textContent= "Student registered successfully!";
        event.preventDefault();
        document.body.append(form);
-       
-
        fetch("https://jsonplaceholder.typicode.com/posts", {
      
-        // Adding method type
         method: "POST",
-         
-        // Adding body or contents to send
         body: JSON.stringify({
-            name: form.get,
+            name: "adss",
             email: "sa@gmail.com",
             mobile: 123
         }),
-         
-        // Adding headers to the request
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
     })
-     
-    // Converting to JSON
     .then(response => response.json())
-     
-    // Displaying results to console
     .then(json => console.log(json));
 
 
@@ -44,34 +31,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getStudents() {
         console.log("inside getStudents function");
-       
-       
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then(response => response.json())
+        .then(res => {
 
-       fetch("https://jsonplaceholder.typicode.com/posts", {
-     
-        // Adding method type
-        method: "POST",
-         
-        // Adding body or contents to send
-        body: JSON.stringify({
-            name: "sa",
-            email: "sa@gmail.com",
-            mobile: 123
-        }),
-         
-        // Adding headers to the request
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    })
-     
-    // Converting to JSON
-    .then(response => response.json())
-     
-    // Displaying results to console
-    .then(json => console.log(json));
+                let li = `<tr><th>Student's Name</th><th>Email</th></tr>`;
 
+    
+        res.forEach(students => {
+            li += `<tr>
+                <td>${students.name} </td>
+                <td>${students.email}</td>		
+            </tr>`;
+        });
 
-    }
-
+document.getElementById("students").innerHTML = li;
+});
+}
 });

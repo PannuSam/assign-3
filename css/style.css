@@ -138,9 +138,10 @@ a {
     display:inline-block; 
 }
 #students {
-    width: 100%;
+    width: 70%;
     font-family: Geneva, Helvetica, sans-serif;
     border-collapse: collapse;
+   margin: auto;
     
   }
   #students td, #students th {

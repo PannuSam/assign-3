@@ -48,8 +48,6 @@ a {
    .menuList li:hover {
     display: inline-block;
     border-radius: 4px;
-    background-color: #ffffff;
-    transition: 0.4s ease;
    }
    @media (max-width: 900px) {
     .menuList { 

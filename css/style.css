@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+   }
+body {
+    font-family: Geneva;
+   }
+li {
+    list-style: none;
+   }
+a {
+    text-decoration: none;
+
+   }
+   .navig {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+    background-color: rgb(0, 46, 46);
+   }
+   .logo {
+    font-size: 34px;
+   }
+   .hamburgerSign {
+    display: none;
+    user-select: none;
+    font-size: 26px;
+   }
+   .navi-opt a {
+    color: rgb(255, 255, 255);
+   }
+   input[type=checkbox]{
+       display: none;
+    margin-right: 1em;
+    margin-left: 2em;
+   }
+   .menuList {
+    display: flex;
+    font-size: 20px;
+    gap: 1.5em;
+   }
+   .menuList li {
+    padding: 4px 12px;
+   }
+   .menuList li:hover {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: 0.4s ease;
+   }
+   @media (max-width: 900px) {
+    .menuList { 
+     display: none;
+     padding: 18px 2px;
+     left: 0;
+     right: 0;
+     background-color: rgb(0, 46, 46);
+     position: absolute;
+     text-align: center;
+    }
+    .hamburgerSign {
+        display: block;
+    }
+    input[type=checkbox]:checked ~ .menuList{
+        display: block;
+    } 
+   }
+.registration-form {
+  font-family: "Geneva", sans-serif;
+  width: 60%;
+  margin:4em auto;
+  background: white;
+  color: rgb(187, 128, 0);
+}
+.registration-form .register-form-footer {
+    border-top: 2px solid rgb(0, 46, 46);
+    padding:2em 3em;
+    text-align: center;
+    clear:both;
+  }
+.register-form-head {
+  text-align: center;
+  padding-bottom: 2em;
+  border-bottom: 2px solid rgb(0, 46, 46)
+}
+.success-msg{
+    margin-top: 3em;
+    text-align: center;
+  padding-bottom: 0.1em;
+}
+.register-form-main {
+  padding:2em 3em;
+  color: rgb(0, 46, 46);
+}
+.register-form-main .label-name{
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .register-form-main .form-placeholder {
+    width: 100%;
+    height: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+    border: 1px solid #cfcccc;
+    background: white;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+    outline: none;   
+  }
+.form-comb .name {
+    float:left;
+    width:48%;
+  }
+  .form-comb .surname{
+    float:right;
+    width:48%;
+  }
+.form-h-comb{
+  margin-bottom: 1em;
+}
+::-webkit-input-placeholder  {
+  color:#d4d3d3;
+}
+.register-form-footer  button{
+  text-align: center;
+}
+.register {
+    padding:1em 2em;
+    font-size:18px;
+    background-color: rgb(0, 46, 46);
+    color:#ffffff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    display:inline-block; 
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Vidya</title>
+</head>
+<body>
+    <div>
+    <nav class="navig">
+
+        <div class="logo">Vidya</div>
+
+        <ul class="navi-opt">
+
+        <input type="checkbox" id="t-checkbox" />
+
+        <label for="t-checkbox" class="hamburgerSign">&#9776;</label>
+      
+        <div class="menuList">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Students</a></li>
+        <li><a href="/">Teachers</a></li>
+        <li><a href="/">Parents</a></li>
+        <li><a href="/">Donation</a></li>
+        </div>
+        </ul>
+        </nav>
+</div>
+<div>
+    <p id="success" class="success-msg"></p>
+    <form class="registration-form"  method="post" id="register">
+        <div class="register-form-head">
+          <h2>Student Registration Form</h2>
+        </div>
+        <div class="register-form-main">
+
+          <div class="form-comb">
+            <div class="form-h-comb name">
+              <label for="name" class="label-name">Name</label>
+              <input type="text" id="name" class="form-placeholder" placeholder="Please enter student's name" />
+            </div>
+            <div class="form-h-comb surname">
+              <label for="surname" class="label-name">Surname *</label>
+              <input type="text" id="surname" class="form-placeholder" placeholder="Please enter student's surname" required="required" />
+            </div>
+          </div>
+
+          <div class="form-h-comb">
+            <label for="email" class="label-name">Email *</label>
+            <input type="email" id="email" class="form-placeholder" placeholder="Please enter student's email" required="required">
+          </div>
+  
+          <div class="form-h-comb">
+            <label for="mobile" class="label-name">Mobile Number. *</label>
+            <input type="mobile" id="mobile" class="form-placeholder" placeholder="Please enter student's mobile" required="required">
+          </div>
+
+          <div class="form-h-comb">
+            <label for="grade" class="label-name">School Year</label>
+            <input type="grade" id="grade" class="form-placeholder" placeholder="Please enter student's school year" required="required">
+          </div>
+  
+          <div class="form-h-comb">
+        
+              <label class="label-name">Select the gender:</label>
+              <div class="input-group">
+                <label for="male"><input type="radio"  id="male"  value="male" name="gender"> Male</label>
+                <label for="female"><input type="radio" id="female" value="female" name="gender" > Female</label>
+             
+            </div>
+            </div>
+            <div class="form-h-comb">
+              <label class="label-name">Subject Selected</label>
+              <div >
+                <label><input type="checkbox" value="math" style="display: inline-block;">Science</label> <br>
+                <label><input type="checkbox" value="science" style="display: inline-block;">Mathematics</label><br>
+                <label><input type="checkbox" value="history" style="display: inline-block;">Languages</label><br>
+                <label><input type="checkbox" value="english" style="display: inline-block;">History</label><br>
+              </div>
+            </div>
+         
+          <div class="form-h-comb">
+              <label for="age" class="label-name">Age</label>
+              <input type="number" min="3" max="20"  value="18" class="form-placeholder">
+          </div>
+  
+        </div>
+  
+        <div class="register-form-footer">
+          <button type="submit" class="register" id="registerbtn">Register</button>
+        </div>
+  
+      </form>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
